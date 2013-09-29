@@ -1,3 +1,10 @@
+debathena-auto-update (1.44) unstable; urgency=low
+
+  * Add git-buildpackage configuration
+  * Set source format to 3.0 (native)
+
+ -- Alexander Chernyakhovsky <achernya@mit.edu>  Sun, 29 Sep 2013 05:02:51 -0400
+
 debathena-auto-update (1.43) unstable; urgency=low
 
   * Desupport auto-upgrades to anything older than precise
