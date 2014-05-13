@@ -1,3 +1,11 @@
+debathena-auto-update (1.45) unstable; urgency=low
+
+  * Do not attempt to run update hooks out of /var/run, since it's mounted
+    noexec; use /var/tmp instead (Trac: #1461)
+  * Delete the script upon successful execution
+
+ -- Jonathan Reed <jdreed@mit.edu>  Tue, 13 May 2014 15:32:36 -0400
+
 debathena-auto-update (1.44) unstable; urgency=low
 
   * Add git-buildpackage configuration
