@@ -1,3 +1,9 @@
+debathena-auto-update (1.46) unstable; urgency=low
+
+  * Switch back to /var/run and invoke update hook via sh directly.
+
+ -- Sean Preston <wpreston@mit.edu>  Thu, 15 May 2014 11:09:08 -0700
+
 debathena-auto-update (1.45) unstable; urgency=low
 
   * Do not attempt to run update hooks out of /var/run, since it's mounted
