@@ -177,7 +177,7 @@ CLEANUP_OLD_KERNELS=no
 # On cluster machines, force our desired settings
 # Ignore /etc/default/debathena-auto-update
 if dpkg-query --showformat '${Status}\n' -W "debathena-cluster" 2>/dev/null | grep -q ' installed$'; then
-    CLEANUP_OLD_KERNELS=yes
+    CLEANUP_OLD_KERNELS=no
     UPDATE_FORCE_CONFFILE=new
     RUN_UPDATE_HOOK=yes
 fi

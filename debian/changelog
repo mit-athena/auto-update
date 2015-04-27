@@ -1,3 +1,11 @@
+debathena-auto-update (1.47) unstable; urgency=low
+
+  * Disable CLEANUP_OLD_KERNELS, because it no longer works on Trusty,
+    because the linux-image-extra-VERSION-generic packages now depend on
+    linux-image-generic, and autoremove it.
+
+ -- Jonathan Reed <jdreed@mit.edu>  Mon, 27 Apr 2015 14:25:10 -0400
+
 debathena-auto-update (1.46) unstable; urgency=low
 
   * Switch back to /var/run and invoke update hook via sh directly.
