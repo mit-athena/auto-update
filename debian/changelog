@@ -1,3 +1,10 @@
+debathena-auto-update (1.48) unstable; urgency=medium
+
+  * Remove MIT CA, which no longer signs https://athena10.mit.edu.
+  * Depend curl and ca-certificates.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Thu, 23 Jun 2016 03:31:19 -0400
+
 debathena-auto-update (1.47) unstable; urgency=low
 
   * Disable CLEANUP_OLD_KERNELS, because it no longer works on Trusty,

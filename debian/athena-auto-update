@@ -184,13 +184,12 @@ fi
 
 UPDATE_HOOK_URL="https://athena10.mit.edu/update-hook/debathena-update-hook.sh"
 UPDATE_HOOK_SUM="https://athena10.mit.edu/update-hook/debathena-update-hook-sha256sum"
-MITCA="/usr/share/debathena-auto-update/mitCA.crt"
 UPDATE_HOOK="/var/run/debathena-update-hook.sh"
 
 rm -f $UPDATE_HOOK
 if [ "$RUN_UPDATE_HOOK" = "yes" ] && \
-   curl -sf -o $UPDATE_HOOK --cacert $MITCA $UPDATE_HOOK_URL; then
-   SHA256SUM="$(curl -sf --cacert $MITCA $UPDATE_HOOK_SUM)"
+   curl -sf -o "$UPDATE_HOOK" "$UPDATE_HOOK_URL"; then
+   SHA256SUM="$(curl -sf "$UPDATE_HOOK_SUM")"
    rv=$?
    if [ $rv != 0 ]; then
        complain "Failed to retrieve $UPDATE_HOOK_SUM (curl returned $rv)"
